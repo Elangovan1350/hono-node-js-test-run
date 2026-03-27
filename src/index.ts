@@ -16,12 +16,12 @@ app.post("/login", async (c) => {
   return c.json({ name, email, password });
 });
 
-// serve(
-//   {
-//     fetch: app.fetch,
-//     port: 3001,
-//   },
-//   (info) => {
-//     console.log(`Server is running on http://localhost:${info.port}`);
-//   },
-// );
+serve(
+  {
+    fetch: app.fetch,
+    port: 3001,
+  },
+  (info) => {
+    console.log(`Server is running on http://localhost:${info.port}`);
+  },
+);
